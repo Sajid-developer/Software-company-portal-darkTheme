@@ -1210,7 +1210,7 @@ section.projects .project-card-wrapper .project-card{
     opacity: 1;
     animation:left-in-fade ease;
     animation-timeline: view();
-    animation-range: entry 0% cover 70%;
+    animation-range: entry 0% cover 60%;
 }
 
 .services .leftBox {
@@ -1390,10 +1390,10 @@ section.projects .project-card-wrapper .project-card{
 }
 
 .products-container .main-heading .feature-label {
-    background-color: rgba(73, 255, 36, 0.2);
+    background-color: rgba(48, 255, 52, 0.06);
     padding: 4px 16px;
     font-size: 14px;
-    color: #13b523;
+    color: #14db28;
     border-radius: 30px;
     border: 1px solid #13FF1D;
 }
