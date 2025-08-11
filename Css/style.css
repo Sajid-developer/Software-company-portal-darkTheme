@@ -91,7 +91,7 @@ header .navBar {
     align-items: center;
     width: 100%;
     height: 80px;
-    background-color: #021B1A;
+    background-color: #010c0c;
     padding: 0px 70px;
     overflow: hidden;
     user-select: none;
@@ -120,8 +120,8 @@ header .navBar {
 }
 
 .navBar .nav-links a {
-    color: rgb(186, 255, 235);
-    font-size: 14px;
+    color: rgb(215, 255, 244);
+    font-size: 13px;
     font-weight: 300;
     margin: 0 8px;
     padding: 8px 12px;
@@ -181,18 +181,20 @@ header .navBar {
 }
 
 .navBar .hamburger-icon:hover {
-    color: #2fa52d;
+    color: #1ba019;
 }
 
 header .main-heading {
+    width: 55%;
     text-align: center;
-    margin: 110px 0 30px 0;
+    margin: 140px 0 30px 0;
     padding: 8px 12px;
 }
 
 header .main-heading h1 {
     word-spacing: 4px;
     user-select: none;
+    line-height: 52px;
 }
 
 header .main-heading .para {
@@ -259,14 +261,14 @@ header .banner .swiper {
 
 .banner .swiper .swiper-pagination {
     padding: 14px;
-    background: linear-gradient(180deg, transparent, rgb(2, 28, 30));
-    margin-bottom: -8px;
+    background: linear-gradient(180deg, rgba(2, 28, 30, 0.45));
+    margin-bottom: -10px;
 }
 
 .swiper-pagination span {
     width: 36px;
     height: 8px;
-    background-color: #35e1ff;
+    background-color: #2ecce8;
     border-radius: 4px;
 }
 
@@ -293,7 +295,7 @@ header .banner h2 {
     line-height: 50px;
     letter-spacing: 0.5px;
     color: rgb(240, 240, 240);
-    border-left: 8px solid rgb(255, 255, 255);
+    border-left: 8px solid rgb(16, 18, 28);
 }
 
 header .banner h2 span {
@@ -306,7 +308,7 @@ header .banner h2 span {
 header .banner.product-detailed{
     width: 96%;
     height: 650px;
-    background: linear-gradient(70deg, rgba(0, 0, 0, 0.8) 55%, rgba(0,0,0,0.1) 45%), url(../Images/product-details-banner.jpg);
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1), rgba(0,0,0,0.1)), url(../Images/product-details-banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1245,13 +1247,24 @@ section.projects .project-card-wrapper .project-card{
 
 .services .rightBox {
     position: relative;
-    width: 660px;
-    height: 380px;
+    width: 650px;
+    height: 370px;
     overflow: hidden;
     border-radius: 20px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 12px 0px rgba(10, 10, 10, 0.4);
-    /* border: 2px solid red; */
+    box-shadow: 0px 6px 14px 10px rgba(6, 20, 12, 0.34);
+    border: 10px outset  rgba(43, 193, 105, 0.4);
+    transform-style: preserve-3d;
+    transition: 0.4s ease;
+}
+.services:nth-child(n) .rightBox{
+    transform: perspective(900px) rotateY(-20deg) rotateX(12deg);
+}
+.services:nth-child(2n) .rightBox{
+    transform: perspective(900px) rotateY(20deg) rotateX(12deg);
+}
+.services .rightBox:hover{
+    transform: perspective(900px) rotateY(0deg);
 }
 
 .services .rightBox:hover img {
@@ -2024,7 +2037,7 @@ form .input-group .input-col textarea {
 /* footer section style here */
 footer {
     width: 100%;
-    background-color: #021B1A;
+    background-color: #010c0c;
     user-select: none;
     box-sizing: border-box;
 }
@@ -2068,7 +2081,7 @@ footer .inner-section {
 .inner-section .quick-link h3 {
     font-size: 14px;
     color: #a8ffa7;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
@@ -2087,7 +2100,7 @@ footer .inner-section {
     font-size: 9px;
     font-weight: 400;
     margin-left: 4px;
-    background-color: rgba(18, 239, 95, 0.2);
+    background-color: rgba(18, 239, 95, 0.1);
     color: rgb(0, 211, 74);
     border-radius: 20px;
     border: 1px groove rgb(18, 239, 95);
@@ -2101,7 +2114,7 @@ footer .inner-section {
     padding: 0 20px 0 0;
     font-size: 13px;
     letter-spacing: 0.7px;
-    color: #a3a3a3;
+    color: #dfdfdf;
     transition: 0.3s ease;
 }
 
@@ -2112,7 +2125,7 @@ footer .inner-section {
 
 .quick-link:nth-child(4) .links a:nth-child(2) {
     letter-spacing: 0.7px;
-    color: #a3a3a3;
+    color: #dfdfdf;
 }
 
 footer .bottom-footer {
@@ -2264,11 +2277,13 @@ footer .bottom-footer {
 /* For mobile devices */
 @media (min-width: 320px) and (max-width: 651px) {
     header .main-heading {
-        margin: 90px 0 30px 0;
+        width: 90%;
+        margin: 110px 0 50px 0;
     }
 
     header .main-heading h1 {
-        font-size: 1.85rem;
+        font-size: 1.8rem;
+        line-height: 44px;
     }
 
     header .main-heading .para {
@@ -2298,16 +2313,16 @@ footer .bottom-footer {
 
     header .banner {
         margin-bottom: 20px;
+        border-radius: 20px;
     }
 
     header .banner .swiper {
         height: 180px;
         border-radius: 20px;
     }
-
     .swiper-pagination span {
-        width: 26px;
-        height: 5px;
+        width: 28px;
+        height: 5.5px;
     }
 
     header .banner h2 {
@@ -2329,7 +2344,7 @@ footer .bottom-footer {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 14px;
+        border-radius: 20px;
     }
 
     header .banner img.about-image {
