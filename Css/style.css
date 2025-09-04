@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    background: #032221;
+    background: #032d25;
     overflow-x: hidden;
 }
 
@@ -31,13 +31,13 @@ a {
 
 h1 {
     font-size: 2.6rem;
-    font-weight: 500;
+    font-weight: 300;
     color: whitesmoke;
 }
 
 h2 {
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 300;
     margin: 10px 0 6px 0;
     color: whitesmoke;
 }
@@ -75,6 +75,7 @@ p {
 
 /* header section style here */
 header {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -91,12 +92,13 @@ header .navBar {
     align-items: center;
     width: 100%;
     height: 80px;
-    background-color: #010c0c;
+    background-color: rgba(1, 12, 12, 0.5);
     padding: 0px 70px;
     overflow: hidden;
     user-select: none;
     transition: 0.3s ease;
     z-index: 100;
+    backdrop-filter: blur(40px);
 }
 
 .navBar.sticky{
@@ -137,6 +139,7 @@ header .navBar {
 
 .navBar .nav-links a.active {
     color: #11ff55;
+    font-weight: 400;
 }
 
 .navBar .right-content {
@@ -155,11 +158,11 @@ header .navBar {
 }
 
 .navBar .buttons button {
-    padding: 8px 18px;
+    padding: 7px 18px;
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.2px;
-    background-color: #21ac1e;
+    background-color: #12ca0f;
     border: 0;
     border: 1px groove #51ea4e;
     outline: none;
@@ -184,6 +187,31 @@ header .navBar {
     color: #1ba019;
 }
 
+.aesthetic-element{
+    background: linear-gradient(30deg, rgb(12, 255, 247), rgb(9, 255, 58));
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -10;
+}
+.aesthetic-element.left{
+    position: absolute;
+    left: 0;
+    top: 350px;
+    width: 360px;
+    height: 360px;
+    opacity: 0.7;
+    transform: translateX(-40%);
+}
+.aesthetic-element.right{
+    position: absolute;
+    right: 0;
+    top: -160px;
+    width: 660px;
+    height: 660px;
+    opacity: 0.7;
+    transform: translateX(40%);
+}
+
 header .main-heading {
     width: 55%;
     text-align: center;
@@ -195,6 +223,10 @@ header .main-heading h1 {
     word-spacing: 4px;
     user-select: none;
     line-height: 52px;
+}
+
+header .main-heading h1 span{
+    color: #20e31d;
 }
 
 header .main-heading .para {
@@ -215,28 +247,30 @@ header .main-heading .buttons {
 header .main-heading .buttons button {
     display: flex;
     align-items: center;
-    padding: 10px 18px;
+    padding: 8px 20px;
     margin: 0 10px;
     color: white;
     font-size: 14px;
     letter-spacing: 0.2px;
-    background-color: #34C531;
+    background-color: #12ca0f;
     border: 0;
     outline: none;
     opacity: 0.9;
     border-radius: 30px;
     border: 1.5px groove #21e61e;
-    box-shadow: 1px 1px 50px 30px rgba(73, 255, 36, 0.3);
+    box-shadow: 0px 0px 1px 4px rgba(13, 235, 79, 0.5);
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .main-heading .buttons button:hover {
     opacity: 0.8;
+    box-shadow: 0px 0px 50px 30px rgba(13, 235, 79, 0.4);
 }
 
 .main-heading .buttons button img {
-    width: 18px;
-    margin-left: 6px;
+    width: 20px;
+    margin-left: 14px;
 }
 
 .main-heading .buttons button.product {
@@ -251,6 +285,7 @@ header .banner {
     margin-bottom: 20px;
     border-radius: 30px;
     overflow: hidden;
+    border-top: 3px solid #00d870;
 }
 
 header .banner .swiper {
@@ -261,7 +296,7 @@ header .banner .swiper {
 
 .banner .swiper .swiper-pagination {
     padding: 14px;
-    background: linear-gradient(180deg, rgba(2, 28, 30, 0.45));
+    background: linear-gradient(0deg, rgba(2, 28, 30, 0.7), transparent);
     margin-bottom: -10px;
 }
 
@@ -1685,7 +1720,7 @@ section.projects .project-card-wrapper .project-card{
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin: 70px auto 0 auto;
+    margin: 100px auto 0 auto;
     /* border: 2px dashed deepskyblue; */
 }
 
@@ -1694,12 +1729,12 @@ section.projects .project-card-wrapper .project-card{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     /* border: 2px solid black; */
 }
 
 .career-card-container .container2 {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .career-card-container .container .career-card {
@@ -1708,11 +1743,13 @@ section.projects .project-card-wrapper .project-card{
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(238, 255, 248);
-    padding: 35px 30px;
-    border: 1px solid rgb(131, 255, 185);
+    background: linear-gradient(30deg, rgb(5, 129, 108), rgb(4, 63, 53));
+    padding: 45px 35px;
+    border-top: 2px solid rgb(5, 129, 108);
+    border-left: 2px solid rgb(5, 129, 108);
     border-radius: 14px;
     user-select: none;
+    box-sizing: border-box;
     transition: 0.4s ease;
 }
 
@@ -1722,14 +1759,16 @@ section.projects .project-card-wrapper .project-card{
 
 .career-card-container .container .career-card .header {
     display: flex;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(11, 128, 110);
 }
 
 .container .career-card .header .iconBox {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
     margin-right: 20px;
-    box-shadow: 0 0 0 6px rgba(92, 255, 187, 0.4);
+    box-shadow: 0 0 0 5px rgba(50, 255, 221, 0.5);
     border-radius: 50%;
 }
 
@@ -1737,14 +1776,18 @@ section.projects .project-card-wrapper .project-card{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 0 5px rgba(41, 255, 166, 0.6);
+    box-shadow: 0 0 0 3px rgba(50, 255, 221, 0.3);
     object-fit: cover;
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(140deg);
 }
 
 .container .career-card .header .heading h3 {
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: #00eac3;
+}
+.container .career-card .header .heading p{
+    color: #c8fff0;
 }
 
 .container .career-card .content {
@@ -1754,7 +1797,9 @@ section.projects .project-card-wrapper .project-card{
 
 .container .career-card .content p {
     font-size: 15px;
+    font-weight: 300;
     line-height: 24px;
+    color: #75f1dc;
 }
 
 .container .career-card .buttons button {
@@ -1762,20 +1807,20 @@ section.projects .project-card-wrapper .project-card{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(50, 240, 129);
+    background-color: rgb(6, 51, 34);
     padding: 7px 0;
     border: none;
     outline: none;
     font-size: 14px;
-    font-weight: 430;
-    border: 1px solid rgb(41, 255, 108);
+    font-weight: 400;
+    color: white;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
 .career-card .buttons button:hover {
-    background-color: rgb(8, 255, 111);
+    background-color: rgb(2, 16, 10);
     box-shadow: 2px 5px 10px 4px rgba(10, 59, 36, 0.1);
     transform: scale(1.02);
 }
@@ -1783,7 +1828,7 @@ section.projects .project-card-wrapper .project-card{
 .career-card .buttons button i {
     font-size: 1.5rem;
     color: white;
-    margin-left: 7px;
+    margin-left: 12px;
 }
 
 /* About section style here */
