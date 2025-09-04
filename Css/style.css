@@ -194,7 +194,7 @@ header .navBar {
     z-index: -10;
 }
 .aesthetic-element.left{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 350px;
     width: 360px;
@@ -203,7 +203,7 @@ header .navBar {
     transform: translateX(-40%);
 }
 .aesthetic-element.right{
-    position: absolute;
+    position: fixed;
     right: 0;
     top: -160px;
     width: 660px;
