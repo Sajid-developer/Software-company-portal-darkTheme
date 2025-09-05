@@ -2166,6 +2166,7 @@ footer .inner-section {
     margin: 7px 0;
     padding: 0 20px 0 0;
     font-size: 13px;
+    font-weight: 300;
     letter-spacing: 0.7px;
     color: #dfdfdf;
     transition: 0.3s ease;
