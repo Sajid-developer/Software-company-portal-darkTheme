@@ -186,14 +186,14 @@ header .navBar {
     color: #1ba019;
 }
 
-.aesthetic-element{
+header .aesthetic-element{
     background: linear-gradient(30deg, rgb(12, 255, 247), rgb(9, 255, 58));
     border-radius: 50%;
     filter: blur(100px);
     z-index: -10;
 }
-.aesthetic-element.left{
-    position: fixed;
+header .aesthetic-element.left{
+    position: absolute;
     left: 0;
     top: 330px;
     width: 360px;
@@ -201,8 +201,8 @@ header .navBar {
     opacity: 0.6;
     transform: translateX(-40%);
 }
-.aesthetic-element.right{
-    position: fixed;
+header .aesthetic-element.right{
+    position: absolute;
     right: 0;
     top: -160px;
     width: 660px;
@@ -210,8 +210,8 @@ header .navBar {
     opacity: 0.6;
     transform: translateX(46%);
 }
-.aesthetic-element.top{
-    position: fixed;
+header .aesthetic-element.top{
+    position: absolute;
     left: 50%;
     top: -260px;
     width: 700px;
@@ -1626,7 +1626,7 @@ section.projects .project-card-wrapper .project-card{
 
 .product-card .card-content p {
     font-size: 13px;
-    color: rgb(208, 208, 208);
+    color: rgb(146, 255, 201);
     line-height: 22px;
 }
 
@@ -1651,11 +1651,13 @@ section.projects .project-card-wrapper .project-card{
     padding: 10px 20px;
     cursor: pointer;
     border: 1px solid #00a437;
-    box-shadow: 6px 5px 20px 3px rgba(22, 50, 17, 0.4);
+    box-shadow: 6px 6px 20px 3px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
 }
 
 .product-card .bottom-box button:hover {
     background-color: #00a437;
+    box-shadow: 6px 6px 16px 3px rgba(0, 0, 0, 0.3);
 }
 
 .product-card .bottom-box button i {
@@ -1679,7 +1681,7 @@ section.projects .project-card-wrapper .project-card{
     color: white;
     font-size: 14px;
     letter-spacing: 0.2px;
-    background-color: #34C531;
+    background-color: #12d319;
     border: 0;
     outline: none;
     opacity: 1;
